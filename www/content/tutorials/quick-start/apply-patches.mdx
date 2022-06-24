@@ -5,7 +5,7 @@ weight: 30
 group: Quick Start
 ---
 
-At the time of this writing, there are two patches we need to wire everything together.
+At the time of this writing, there are three patches we need to wire everything together.
 
 1. Open your Drupal `composer.json` file.
 2. Add the following patches under `"extra"`.
@@ -19,6 +19,9 @@ At the time of this writing, there are two patches we need to wire everything to
         },
         "drupal/decoupled_router": {
             "Unable to resolve path on node in other language than default": "https://www.drupal.org/files/issues/2021-05-05/3111456-34.patch"
+        },
+        "drupal/core": {
+            "Missing path attribute in JSON:API response": "https://www.drupal.org/files/issues/2022-04-09/drupal-base-field-override-inherit-internal-3274419-2-9.4.patch"
         }
     },
 		// highlight-end
@@ -35,3 +38,4 @@ You can read more about the patches here:
 
 1. https://www.drupal.org/project/subrequests/issues/3049395
 2. https://www.drupal.org/project/decoupled_router/issues/3111456
+3. https://www.drupal.org/project/drupal/issues/3274419
